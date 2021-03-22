@@ -8,6 +8,8 @@ from .serializers import TodoSerializer, UserSerializer
 class TodoViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
+    # filter_fields先がリレーションのあるテーブルだった場合はpk打ち込みで検索
+    filter_fields = ('user', 'title')
 
 
 class UserViewSet(viewsets.ModelViewSet):
