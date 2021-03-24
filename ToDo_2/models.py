@@ -44,7 +44,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     username_validator = UnicodeUsernameValidator()
 
-    uuid = models.UUIDField(default=uuid_lib.uuid4,
+    id = models.UUIDField(default=uuid_lib.uuid4,
                             primary_key=True, editable=False)
     username = models.CharField(
         _('username'),
@@ -107,7 +107,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class Todo(models.Model):
-    uuid = models.UUIDField(default=uuid_lib.uuid4,
+    id = models.UUIDField(default=uuid_lib.uuid4,
                             primary_key=True, editable=False)
     title = models.CharField(_('タイトル'), max_length=100)
     start_at = models.DateTimeField(_('開始日時'))

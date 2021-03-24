@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ToDo_2.apps.Todo2Config',
     'rest_framework',
+    'rest_framework.authtoken',
     'dj_rest_auth',
     'django_filters',
 ]
@@ -77,6 +78,11 @@ WSGI_APPLICATION = 'ToDo.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+    ]
 }
 
 
@@ -130,3 +136,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'ToDo_2.User'
+
+REST_USE_JWT = True
+
+JWT_AUTH_COOKIE = 'jwt-auth'
+
+JWT_AUTH_COOKIE = 'my-app-auth'
+JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
