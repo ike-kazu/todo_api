@@ -1,15 +1,8 @@
 # todo_api
  
-todo_appをAPIにしてみました
+django rest framework を使ったtodo_app
  
-# DEMO
  
-割と基本的なことはできたかなと感じています。
- 
-# Features
- 
-"hoge"のセールスポイントや差別化などを説明する
-
 # Installation
  
 ```bash
