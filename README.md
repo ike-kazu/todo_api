@@ -1,6 +1,6 @@
 # todo_api
  
-django rest framework を使ったtodo_app
+django rest framework を使ったtodo_app   
 dj-rest-authの認証機能を実装するために練習として書いたものです。
  
  
