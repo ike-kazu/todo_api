@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'api/', include(todo_router.urls)),
     path(r'dj-rest-auth/', urls_include('dj_rest_auth.urls')),
+    path(r'dj-rest-auth/registration/', urls_include('dj_rest_auth.registration.urls'))
 ]

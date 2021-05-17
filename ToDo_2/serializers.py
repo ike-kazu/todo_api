@@ -5,7 +5,7 @@ from . import models
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.User
-        fields = ('uuid', 'username', 'first_name', 'last_name', 'email', 'date_joined')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'date_joined')
 
 
 class TodoSerializer(serializers.ModelSerializer):
@@ -13,4 +13,4 @@ class TodoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Todo
-        fields = ('uuid', 'title', 'start_at', 'created_at', 'updated_at', 'user')
+        fields = ('id', 'title', 'start_at', 'created_at', 'updated_at', 'user')

@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ToDo_2.apps.Todo2Config',
     'rest_framework',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
     'rest_framework.authtoken',
     'dj_rest_auth',
     'django_filters',
@@ -143,3 +148,5 @@ JWT_AUTH_COOKIE = 'jwt-auth'
 
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
+
+SITE_ID = 1
